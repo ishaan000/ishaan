@@ -10,6 +10,25 @@ export default function SmoothScroll() {
       const target = e.target as HTMLElement;
       const link = target.closest('a');
       
+      // Handle scroll to top when clicking elements with scroll-to-top class
+      if (target.closest('.scroll-to-top')) {
+        e.preventDefault();
+        
+        // Scroll to top smoothly
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+        
+        // Clear URL hash if present
+        if (window.location.hash) {
+          history.pushState(null, '', window.location.pathname);
+        }
+        
+        return;
+      }
+      
+      // Handle regular anchor links
       if (link && link.hash && link.hash.startsWith('#')) {
         e.preventDefault();
         

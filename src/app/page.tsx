@@ -3,7 +3,7 @@ export default function Home() {
     <div className="min-h-screen flex flex-col">
       {/* Navigation */}
       <nav className="w-full py-4 px-6 md:px-12 flex justify-between items-center backdrop-blur-md bg-black/10 sticky top-0 z-10">
-        <div className="text-xl font-bold gradient-text">Ishaan Bhalla</div>
+        <div className="text-xl font-bold gradient-text scroll-to-top cursor-pointer">Ishaan Bhalla</div>
         {/* Mobile menu button */}
         <button
           className="md:hidden flex flex-col gap-1.5 p-2"
