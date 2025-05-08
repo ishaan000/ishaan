@@ -43,11 +43,11 @@ export default function AboutSection() {
             As a freelance engineer, I specialize in helping startups and
             established companies quickly validate ideas through well-engineered
             prototypes and scalable solutions. Currently, I&apos;m engaged as a
-            Founding Engineer at Cognovi on a contract basis, where I drive the
-            design and deployment of agentic AI systems that improve mental
-            health tools. Previously, I contributed to Albert Invent and SWAY as
-            an engineer, developing innovative solutions across the full stack
-            that created tangible business value.
+            Founding Engineer at Cognovi, where I drive the design and
+            deployment of agentic AI systems that improve mental health tools.
+            Previously, I contributed to Albert Invent and SWAY as an engineer,
+            developing innovative solutions across the full stack that created
+            tangible business value.
           </p>
           <div className="mt-8 space-y-4">
             <h3 className="text-xl font-bold text-accent-secondary">
