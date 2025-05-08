@@ -1,4 +1,12 @@
+"use client";
 export default function HeroSection() {
+  const scrollToNextSection = () => {
+    const aboutSection = document.getElementById("about");
+    if (aboutSection) {
+      aboutSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <section className="flex flex-col items-center justify-center min-h-[90vh] text-center px-4 relative">
       <div className="absolute inset-0 flex items-center justify-center opacity-10">
@@ -16,19 +24,32 @@ export default function HeroSection() {
         <ContactInfo icon="📱" text="+1(669)609-3553" />
         <ContactInfo icon="📧" text="ibhalla1998@gmail.com" />
       </div>
-      <div className="flex gap-4 flex-wrap justify-center">
-        <a
-          href="#projects"
-          className="px-6 py-3 bg-accent-primary hover:bg-accent-primary/80 text-white rounded-full transition-all transform hover:scale-105"
+
+      {/* Half moon scroll indicator */}
+      <div className="absolute bottom-8 left-0 right-0 flex justify-center">
+        <button
+          onClick={scrollToNextSection}
+          className="w-12 h-6 bg-transparent border-2 border-accent-primary rounded-t-full overflow-hidden cursor-pointer hover:bg-accent-primary/20 transition-all transform hover:scale-110"
+          aria-label="Scroll down"
         >
-          View My Work
-        </a>
-        <a
-          href="#contact"
-          className="px-6 py-3 border border-accent-secondary text-accent-secondary hover:bg-accent-secondary/10 rounded-full transition-all transform hover:scale-105"
-        >
-          Contact Me
-        </a>
+          <div className="w-full h-full flex justify-center items-center">
+            <svg
+              width="16"
+              height="8"
+              viewBox="0 0 16 8"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M1 1L8 7L15 1"
+                stroke="var(--accent-primary)"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </div>
+        </button>
       </div>
     </section>
   );

@@ -1,7 +1,12 @@
 "use client";
 import { FormEvent, useState } from "react";
+import { MdEmail, MdPhone, MdLocationOn } from "react-icons/md";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 export default function ContactSection() {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -52,22 +57,24 @@ export default function ContactSection() {
           Get In Touch
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-          <div>
+          <div className="bg-black/30 backdrop-blur-md p-6 rounded-xl">
             <h3 className="text-xl font-bold mb-4">Contact Information</h3>
             <div className="space-y-4">
-              <ContactItem icon="📧" text="ibhalla1998@gmail.com" />
-              <ContactItem icon="📱" text="+1(669)609-3553" />
-              <ContactItem icon="📍" text="San Francisco, CA" />
+              <ContactItem icon={<MdEmail className="text-accent-primary" size={20} />} text="ibhalla1998@gmail.com" />
+              <ContactItem icon={<MdPhone className="text-accent-primary" size={20} />} text="+1(669)609-3553" />
+              <ContactItem icon={<MdLocationOn className="text-accent-primary" size={20} />} text="San Francisco, CA" />
             </div>
 
             <h3 className="text-xl font-bold mt-8 mb-4">Social Links</h3>
             <div className="flex gap-4">
-              <SocialLink href="https://github.com/ishaanbhalla" label="GH" />
-              <SocialLink
-                href="https://linkedin.com/in/ishaanbhalla"
-                label="LI"
+              <SocialLink 
+                href="https://github.com/ishaan000" 
+                icon={<FaGithub size={20} />} 
               />
-              <SocialLink href="https://twitter.com/ishaanbhalla" label="TW" />
+              <SocialLink
+                href="https://linkedin.com/in/ishaan-bhalla"
+                icon={<FaLinkedin size={20} />}
+              />
             </div>
           </div>
 
@@ -145,12 +152,39 @@ export default function ContactSection() {
           </div>
         </div>
       </div>
+
+      {/* Scroll to top button */}
+      <div className="mt-16 flex justify-center">
+        <button
+          onClick={scrollToTop}
+          className="w-12 h-6 bg-transparent border-2 border-accent-primary rounded-b-full overflow-hidden cursor-pointer hover:bg-accent-primary/20 transition-all transform hover:scale-110"
+          aria-label="Scroll to top"
+        >
+          <div className="w-full h-full flex justify-center items-center">
+            <svg
+              width="16"
+              height="8"
+              viewBox="0 0 16 8"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M1 7L8 1L15 7"
+                stroke="var(--accent-primary)"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </div>
+        </button>
+      </div>
     </section>
   );
 }
 
 // Helper component for contact info items
-function ContactItem({ icon, text }: { icon: string; text: string }) {
+function ContactItem({ icon, text }: { icon: React.ReactNode; text: string }) {
   return (
     <p className="flex items-center gap-3">
       <span className="w-8 h-8 flex items-center justify-center bg-accent-primary/20 rounded-full">
@@ -162,7 +196,7 @@ function ContactItem({ icon, text }: { icon: string; text: string }) {
 }
 
 // Helper component for social links
-function SocialLink({ href, label }: { href: string; label: string }) {
+function SocialLink({ href, icon }: { href: string; icon: React.ReactNode }) {
   return (
     <a
       href={href}
@@ -170,7 +204,7 @@ function SocialLink({ href, label }: { href: string; label: string }) {
       rel="noopener noreferrer"
       className="w-10 h-10 flex items-center justify-center bg-accent-primary/20 rounded-full hover:bg-accent-primary/40 transition-colors"
     >
-      <span>{label}</span>
+      {icon}
     </a>
   );
 }
