@@ -33,21 +33,18 @@ export default function AboutSection() {
         </div>
         <div className="max-w-2xl">
           <p className="text-lg mb-4">
-            I&apos;m a Full-Stack Engineer and independent consultant passionate
-            about leveraging technology to create meaningful social impact. With
-            expertise in agentic AI systems, scalable cloud architectures, and
-            rapid end-to-end product development, I excel at transforming
-            concepts into functional MVPs within tight timelines.
+            I&apos;m a Full-Stack Engineer and independent consultant driven by
+            curiosity, creativity, and a deep belief in tech&apos;s potential
+            for good. With a focus on agentic AI systems, scalable cloud
+            architectures, and fast, end-to-end product development, I thrive on
+            turning early concepts into real, working products.
           </p>
           <p className="text-lg mb-4">
-            As a freelance engineer, I specialize in helping startups and
-            established companies quickly validate ideas through well-engineered
-            prototypes and scalable solutions. Currently, I&apos;m engaged as a
-            Founding Engineer at Cognovi, where I drive the design and
-            deployment of agentic AI systems that improve mental health tools.
-            Previously, I contributed to Albert Invent and SWAY as an engineer,
-            developing innovative solutions across the full stack that created
-            tangible business value.
+            Over the years, I&apos;ve collaborated with early-stage startups and
+            growing teams, often stepping into multiple roles across design,
+            engineering, and product. That range has shaped how I approach
+            problems—balancing speed with depth, and always building with
+            intention and impact in mind.
           </p>
           <div className="mt-8 space-y-4">
             <h3 className="text-xl font-bold text-accent-secondary">
