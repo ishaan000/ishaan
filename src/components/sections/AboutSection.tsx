@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 export default function AboutSection() {
   // Education data
   const education = [
@@ -20,10 +22,14 @@ export default function AboutSection() {
       </h2>
       <div className="flex flex-col md:flex-row gap-12 items-center">
         <div className="w-64 h-64 relative rounded-full overflow-hidden border-4 border-accent-primary">
-          {/* Replace with your actual profile image */}
-          <div className="w-full h-full bg-accent-primary/30 flex items-center justify-center text-lg">
-            Profile Image
-          </div>
+          <Image
+            src="/profile.jpeg"
+            alt="Ishaan Bhalla"
+            fill
+            sizes="(max-width: 768px) 100vw, 256px"
+            className="object-cover"
+            priority
+          />
         </div>
         <div className="max-w-2xl">
           <p className="text-lg mb-4">
