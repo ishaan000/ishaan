@@ -3,31 +3,19 @@ import { useState, useEffect } from "react";
 
 export default function Navigation() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
+  
+  // Handle body overflow
   useEffect(() => {
-    // Toggle mobile menu
-    const handleMobileMenuToggle = () => {
-      const mobileMenu = document.getElementById("mobile-menu");
-      const body = document.body;
-
-      if (mobileMenu) {
-        if (isMobileMenuOpen) {
-          mobileMenu.classList.remove("hidden");
-          mobileMenu.classList.add("flex");
-          body.classList.add("overflow-hidden");
-        } else {
-          mobileMenu.classList.add("hidden");
-          mobileMenu.classList.remove("flex");
-          body.classList.remove("overflow-hidden");
-        }
-      }
-    };
-
-    handleMobileMenuToggle();
-
-    // Cleanup
+    
+    // Prevent scrolling when menu is open
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    
     return () => {
-      document.body.classList.remove("overflow-hidden");
+      document.body.style.overflow = '';
     };
   }, [isMobileMenuOpen]);
 
@@ -49,13 +37,13 @@ export default function Navigation() {
         </div>
         {/* Mobile menu button */}
         <button
-          className="md:hidden flex flex-col gap-1.5 p-2"
+          className="md:hidden flex flex-col gap-1.5 p-2 z-20"
           aria-label="Toggle menu"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
-          <span className="w-6 h-0.5 bg-white rounded-full transition-all duration-300"></span>
-          <span className="w-6 h-0.5 bg-white rounded-full transition-all duration-300"></span>
-          <span className="w-6 h-0.5 bg-white rounded-full transition-all duration-300"></span>
+          <span className={`w-6 h-0.5 bg-white rounded-full transition-all duration-300 ease-in-out ${isMobileMenuOpen ? 'transform rotate-45 translate-y-2' : ''}`}></span>
+          <span className={`w-6 h-0.5 bg-white rounded-full transition-all duration-300 ease-in-out ${isMobileMenuOpen ? 'opacity-0' : 'opacity-100'}`}></span>
+          <span className={`w-6 h-0.5 bg-white rounded-full transition-all duration-300 ease-in-out ${isMobileMenuOpen ? 'transform -rotate-45 -translate-y-2' : ''}`}></span>
         </button>
         {/* Desktop navigation */}
         <div className="hidden md:flex gap-6">
@@ -71,32 +59,33 @@ export default function Navigation() {
         </div>
       </nav>
 
-      {/* Mobile navigation overlay */}
-      <div
-        id="mobile-menu"
-        className="fixed inset-0 bg-background/95 backdrop-blur-lg z-50 items-center justify-center hidden"
+      {/* Mobile navigation overlay with smooth animation */}
+      <div 
+        className={`fixed inset-0 bg-background/95 backdrop-blur-lg z-50 flex items-center justify-center transition-all duration-400 ease-in-out ${isMobileMenuOpen ? 'opacity-100 visible scale-100' : 'opacity-0 invisible pointer-events-none scale-95'}`}
       >
-        <button
-          className="absolute top-4 right-6 p-2"
-          aria-label="Close menu"
-          onClick={() => setIsMobileMenuOpen(false)}
-        >
-          <span className="block w-6 h-0.5 bg-white rotate-45 absolute"></span>
-          <span className="block w-6 h-0.5 bg-white -rotate-45 absolute"></span>
-        </button>
-        <div className="flex flex-col items-center gap-8 text-xl">
-          {navLinks.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className="hover:text-accent-primary transition-colors"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              {link.label}
-            </a>
-          ))}
+          <button
+            className="absolute top-4 right-6 p-2 transition-all duration-300 ease-in-out hover:rotate-90"
+            aria-label="Close menu"
+            onClick={() => setIsMobileMenuOpen(false)}
+          >
+            <span className="block w-6 h-0.5 bg-white rotate-45 absolute transition-all"></span>
+            <span className="block w-6 h-0.5 bg-white -rotate-45 absolute transition-all"></span>
+          </button>
+          <div className="flex flex-col items-center gap-8 text-xl">
+            {navLinks.map((link, index) => (
+              <a
+                key={link.href}
+                href={link.href}
+                className="hover:text-accent-primary transition-colors transform hover:scale-110"
+                onClick={() => setIsMobileMenuOpen(false)}
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                {link.label}
+              </a>
+            ))}
+          </div>
         </div>
-      </div>
+      
     </>
   );
 }
