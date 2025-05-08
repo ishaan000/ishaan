@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image from "next/image";
 
 export default function AboutSection() {
   // Education data
@@ -20,7 +20,7 @@ export default function AboutSection() {
       <h2 className="text-3xl md:text-4xl font-bold mb-12 gradient-text text-center">
         About Me
       </h2>
-      <div className="flex flex-col md:flex-row gap-12 items-center">
+      <div className="flex flex-col md:flex-row gap-12 items-centerbg-black/20 backdrop-blur-sm">
         <div className="w-64 h-64 relative rounded-full overflow-hidden border-4 border-accent-primary">
           <Image
             src="/profile.jpeg"

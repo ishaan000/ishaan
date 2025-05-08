@@ -34,23 +34,23 @@ export default function ContactSection() {
 
     try {
       // Send form data to our API endpoint
-      const response = await fetch('/api/contact', {
-        method: 'POST',
+      const response = await fetch("/api/contact", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify(formData),
       });
 
       if (!response.ok) {
-        throw new Error('Failed to send message');
+        throw new Error("Failed to send message");
       }
 
       setSubmitStatus("success");
       // Reset form after successful submission
       setFormData({ name: "", email: "", message: "" });
     } catch (error) {
-      console.error('Error sending message:', error);
+      console.error("Error sending message:", error);
       setSubmitStatus("error");
     } finally {
       setIsSubmitting(false);
@@ -58,28 +58,36 @@ export default function ContactSection() {
   };
 
   return (
-    <section
-      id="contact"
-      className="py-20 px-6 md:px-12 bg-black/20 backdrop-blur-sm"
-    >
+    <section id="contact" className="py-20 px-6 md:px-12">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold mb-12 gradient-text text-center">
           Get In Touch
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-          <div className="bg-black/30 backdrop-blur-md p-6 rounded-xl">
+          <div className="bg-black/30 backdrop-blur-sm p-6 rounded-xl">
             <h3 className="text-xl font-bold mb-4">Contact Information</h3>
             <div className="space-y-4">
-              <ContactItem icon={<MdEmail className="text-accent-primary" size={20} />} text="ibhalla1998@gmail.com" />
-              <ContactItem icon={<MdPhone className="text-accent-primary" size={20} />} text="+1(669)609-3553" />
-              <ContactItem icon={<MdLocationOn className="text-accent-primary" size={20} />} text="San Francisco, CA" />
+              <ContactItem
+                icon={<MdEmail className="text-accent-primary" size={20} />}
+                text="ibhalla1998@gmail.com"
+              />
+              <ContactItem
+                icon={<MdPhone className="text-accent-primary" size={20} />}
+                text="+1(669)609-3553"
+              />
+              <ContactItem
+                icon={
+                  <MdLocationOn className="text-accent-primary" size={20} />
+                }
+                text="San Francisco, CA"
+              />
             </div>
 
             <h3 className="text-xl font-bold mt-8 mb-4">Social Links</h3>
             <div className="flex gap-4">
-              <SocialLink 
-                href="https://github.com/ishaan000" 
-                icon={<FaGithub size={20} />} 
+              <SocialLink
+                href="https://github.com/ishaan000"
+                icon={<FaGithub size={20} />}
               />
               <SocialLink
                 href="https://linkedin.com/in/ishaan-bhalla"
@@ -149,7 +157,8 @@ export default function ContactSection() {
 
               {submitStatus === "success" && (
                 <p className="text-green-400 text-center">
-                  Message sent successfully! Ishaan will reach back as soon as possible.
+                  Message sent successfully! Ishaan will reach back as soon as
+                  possible.
                 </p>
               )}
 

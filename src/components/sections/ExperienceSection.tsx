@@ -52,10 +52,7 @@ export default function ExperienceSection() {
   ];
 
   return (
-    <section
-      id="experience"
-      className="py-20 px-6 md:px-12 bg-black/20 backdrop-blur-sm"
-    >
+    <section id="experience" className="py-20 px-6 md:px-12">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold mb-12 gradient-text text-center">
           Experience
