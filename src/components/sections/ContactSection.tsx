@@ -32,15 +32,25 @@ export default function ContactSection() {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Here you would typically send the form data to your backend
-    // For now, we'll just simulate a submission
     try {
-      // Simulate API call
-      await new Promise((resolve) => setTimeout(resolve, 1000));
+      // Send form data to our API endpoint
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to send message');
+      }
+
       setSubmitStatus("success");
       // Reset form after successful submission
       setFormData({ name: "", email: "", message: "" });
-    } catch {
+    } catch (error) {
+      console.error('Error sending message:', error);
       setSubmitStatus("error");
     } finally {
       setIsSubmitting(false);
@@ -139,7 +149,7 @@ export default function ContactSection() {
 
               {submitStatus === "success" && (
                 <p className="text-green-400 text-center">
-                  Message sent successfully!
+                  Message sent successfully! Ishaan will reach back as soon as possible.
                 </p>
               )}
 

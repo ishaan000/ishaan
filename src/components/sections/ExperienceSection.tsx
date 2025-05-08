@@ -10,7 +10,7 @@ export default function ExperienceSection() {
   // Experience data
   const experiences: ExperienceItem[] = [
     {
-      title: "Founding Engineer",
+      title: "Founding Engineer (Contract)",
       company: "Cognovi",
       period: "July 2024 - Present",
       responsibilities: [
@@ -21,7 +21,7 @@ export default function ExperienceSection() {
       ],
     },
     {
-      title: "Full Stack Data Engineer",
+      title: "Full Stack Data Engineer (Contract)",
       company: "Albert Invent",
       period: "October 2023 - July 2024",
       responsibilities: [

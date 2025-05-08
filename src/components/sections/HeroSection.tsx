@@ -16,8 +16,8 @@ export default function HeroSection() {
         Ishaan Bhalla
       </h1>
       <p className="text-xl md:text-2xl max-w-3xl text-text-secondary mb-8">
-        Full-Stack Engineer passionate about building AI-first products that
-        solve real-world problems
+        Full-Stack Engineer & Independent Consultant specializing in rapid MVP
+        development and AI-first solutions that drive positive change
       </p>
       <div className="flex gap-4 flex-wrap justify-center mb-8">
         <ContactInfo icon="📍" text="San Francisco" />

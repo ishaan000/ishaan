@@ -24,7 +24,7 @@ export default function ProjectsSection() {
       bgColorClass: "bg-accent-primary/20",
       technologies: ["Next.js", "TypeScript", "Flask", "GPT-4"],
       projectLink: "#",
-      sourceLink: "#",
+      sourceLink: "https://github.com/ishaan000/Seeker",
     },
     {
       title: "FootPrint",
@@ -36,19 +36,19 @@ export default function ProjectsSection() {
       bgColorClass: "bg-accent-secondary/20",
       technologies: ["Next.js 15", "TypeScript", "Material UI", "Vector DB"],
       projectLink: "#",
-      sourceLink: "#",
+      sourceLink: "https://github.com/ishaan000/FootPrint",
     },
     {
-      title: "Healthcare Solution",
-      subtitle: "Healthcare Onboarding",
+      title: "Git Guide",
+      subtitle: "Github tips and tricks",
       description:
-        "Client intake portal for therapy services, automating patient demographics collection, insurance verification, and payment processing.",
-      emoji: "🏥",
-      emojiLabel: "Healthcare Onboarding",
+        "A collection of git commands and tips to help you get started with git.",
+      emoji: "📖",
+      emojiLabel: "Git Guide",
       bgColorClass: "bg-accent-primary/20",
-      technologies: ["HIPAA Compliant", "Stripe API", "Secure Data"],
-      projectLink: "#",
-      sourceLink: "#",
+      technologies: ["Next.js", "TypeScript", "Material UI"],
+      projectLink: "https://git-guide-xi.vercel.app/",
+      sourceLink: "https://github.com/ishaan000/git-guide",
     },
   ];
 
