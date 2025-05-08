@@ -60,14 +60,6 @@ To customize this portfolio for your own use:
 
 This portfolio is optimized for deployment on [Vercel](https://vercel.com), but can be deployed on any platform that supports Next.js applications.
 
-```bash
-vercel
-```
-
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
 ---
 
 Built with ❤️ by Ishaan Bhalla
