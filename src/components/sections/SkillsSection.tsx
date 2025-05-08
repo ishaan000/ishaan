@@ -16,27 +16,28 @@ export default function SkillsSection() {
     {
       title: "AI & ML",
       colorClass: "text-accent-secondary",
-      skills: ["OpenAI API", "LangChain", "Agentic AI", "Vector Embeddings"],
+      skills: [
+        "OpenAI API",
+        "LangChain",
+        "Agentic AI",
+        "Vector Embeddings",
+        "Perplexity Sonar API",
+      ],
     },
     {
       title: "Frontend",
       colorClass: "text-accent-primary",
-      skills: [
-        "Next.js / React",
-        "Tailwind CSS",
-        "Material-UI",
-        "Web Components",
-      ],
+      skills: ["Next.js", "React", "Tailwind CSS", "Material-UI", "Three.js"],
     },
     {
       title: "Backend",
       colorClass: "text-accent-secondary",
-      skills: ["Node.js / Express", "FastAPI", "GraphQL", "WebSockets"],
+      skills: ["Node.js", "Express", "FastAPI", "GraphQL", "WebSockets"],
     },
     {
       title: "Databases",
       colorClass: "text-accent-primary",
-      skills: ["PostgreSQL", "DynamoDB", "MongoDB", "MySQL"],
+      skills: ["PostgreSQL", "DynamoDB", "MySQL", "Supabase"],
     },
     {
       title: "Data Engineering",

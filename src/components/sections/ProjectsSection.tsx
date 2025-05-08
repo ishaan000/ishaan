@@ -42,11 +42,11 @@ export default function ProjectsSection() {
       bgColorClass: "bg-accent-secondary/20",
       technologies: [
         "Next.js",
+        "Perplexity Sonar",
         "TypeScript",
         "Material UI",
         "Vector DB",
         "Supabase",
-        "Grok AI",
       ],
       projectLink: "https://footprint-ai.vercel.app/",
       sourceLink: "https://github.com/ishaan000/FootPrint",
