@@ -16,7 +16,21 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Ishaan Bhalla | Software Engineer",
-  description: "Portfolio website showcasing my skills, projects, and experience as a software engineer",
+  description:
+    "Portfolio website showcasing my skills, projects, and experience as a software engineer",
+  openGraph: {
+    title: "Ishaan Bhalla | Software Engineer",
+    description:
+      "Portfolio website showcasing my skills, projects, and experience as a software engineer",
+    images: [
+      {
+        url: "/image.png", // Using the hero image instead of profile picture
+        width: 1200,
+        height: 630,
+        alt: "Ishaan Bhalla - Software Engineer",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
