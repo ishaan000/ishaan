@@ -50,7 +50,7 @@ export default function ProjectsSection() {
         "Supabase",
       ],
       projectLink: "https://footprint-ai.vercel.app/",
-      sourceLink: "https://github.com/ishaan000/FootPrint",
+      sourceLink: "https://github.com/ishaan000/footprint-ai",
     },
     {
       title: "Git Guide",
@@ -137,22 +137,52 @@ function ProjectCard({ project }: { project: ProjectItem }) {
             </span>
           ))}
         </div>
-        <div className="flex gap-4">
+        <div className="flex gap-4 mt-3 relative z-10">
           {projectLink && (
             <a
               href={projectLink}
-              className="text-accent-primary hover:underline"
+              className="px-3 py-1.5 border-2 border-accent-primary text-accent-primary rounded-lg font-medium flex items-center transition-all hover:bg-accent-primary hover:text-white hover:shadow-md transform hover:-translate-y-0.5"
               onClick={(e) => e.stopPropagation()} // Prevent triggering the parent onClick
+              aria-label="View Project"
             >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-4 w-4 mr-1.5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                />
+              </svg>
               View Project
             </a>
           )}
           {sourceLink && (
             <a
               href={sourceLink}
-              className="text-accent-secondary hover:underline"
+              className="px-3 py-1.5 border-2 border-accent-secondary text-accent-secondary rounded-lg font-medium flex items-center transition-all hover:bg-accent-secondary hover:text-white hover:shadow-md transform hover:-translate-y-0.5"
               onClick={(e) => e.stopPropagation()} // Prevent triggering the parent onClick
+              aria-label="View Source Code"
             >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-4 w-4 mr-1.5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
+                />
+              </svg>
               Source Code
             </a>
           )}

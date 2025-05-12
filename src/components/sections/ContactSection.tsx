@@ -150,8 +150,22 @@ export default function ContactSection() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="px-6 py-3 bg-accent-primary hover:bg-accent-primary/80 text-white rounded-lg transition-all transform hover:scale-105 w-full disabled:opacity-70 disabled:cursor-not-allowed"
+                className="px-6 py-3 border-2 border-accent-primary text-accent-primary rounded-lg font-medium transition-all hover:bg-accent-primary hover:text-white hover:shadow-md transform hover:-translate-y-0.5 w-full disabled:opacity-70 disabled:cursor-not-allowed flex justify-center items-center cursor-pointer"
               >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-4 w-4 mr-2"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                  />
+                </svg>
                 {isSubmitting ? "Sending..." : "Send Message"}
               </button>
 
