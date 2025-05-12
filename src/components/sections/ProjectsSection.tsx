@@ -1,3 +1,4 @@
+"use client";
 // Types for our project data
 interface ProjectItem {
   title: string;
@@ -101,8 +102,19 @@ function ProjectCard({ project }: { project: ProjectItem }) {
     sourceLink,
   } = project;
 
+  // Handle card click to navigate to the main project link
+  const handleCardClick = () => {
+    const link = projectLink || sourceLink;
+    if (link) {
+      window.open(link, "_blank");
+    }
+  };
+
   return (
-    <div className="bg-black/30 backdrop-blur-md rounded-xl overflow-hidden hover:transform hover:scale-[1.02] transition-all">
+    <div
+      onClick={handleCardClick}
+      className="bg-black/30 backdrop-blur-md rounded-xl overflow-hidden hover:transform hover:scale-[1.02] transition-all cursor-pointer"
+    >
       <div
         className={`h-48 ${bgColorClass} flex items-center justify-center text-center p-4`}
       >
@@ -130,6 +142,7 @@ function ProjectCard({ project }: { project: ProjectItem }) {
             <a
               href={projectLink}
               className="text-accent-primary hover:underline"
+              onClick={(e) => e.stopPropagation()} // Prevent triggering the parent onClick
             >
               View Project
             </a>
@@ -138,6 +151,7 @@ function ProjectCard({ project }: { project: ProjectItem }) {
             <a
               href={sourceLink}
               className="text-accent-secondary hover:underline"
+              onClick={(e) => e.stopPropagation()} // Prevent triggering the parent onClick
             >
               Source Code
             </a>
