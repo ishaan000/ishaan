@@ -16,6 +16,18 @@ export default function ProjectsSection() {
   // Projects data
   const projects: ProjectItem[] = [
     {
+      title: "Medha",
+      subtitle: "AI Voice Agent",
+      description:
+        "An AI-powered voice assistant that can perform tasks and answer questions about my experience.",
+      emoji: "💬",
+      emojiLabel: "AI Voice Agent",
+      bgColorClass: "bg-accent-secondary/20",
+      technologies: ["Next.js", "ElevenLabs", "TypeScript", "Tailwind CSS"],
+      projectLink: "https://agentic-assistant.vercel.app/",
+      sourceLink: "https://github.com/ishaan000/agentic-assistant",
+    },
+    {
       title: "Seeker",
       subtitle: "AI Job Search Assistant",
       description:
@@ -32,18 +44,6 @@ export default function ProjectsSection() {
       ],
       projectLink: "https://github.com/ishaan000/Seeker",
       sourceLink: "https://github.com/ishaan000/Seeker",
-    },
-    {
-      title: "Medha",
-      subtitle: "AI Voice Agent",
-      description:
-        "An AI-powered voice assistant that can perform tasks and answer questions using my experience.",
-      emoji: "💬",
-      emojiLabel: "AI Voice Agent",
-      bgColorClass: "bg-accent-secondary/20",
-      technologies: ["Next.js", "ElevenLabs", "TypeScript", "Tailwind CSS"],
-      projectLink: "https://agentic-assistant.vercel.app/",
-      sourceLink: "https://github.com/ishaan000/agentic-assistant",
     },
     {
       title: "Git Guide",
