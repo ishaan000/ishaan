@@ -1,4 +1,6 @@
 "use client";
+import { motion } from 'framer-motion';
+
 export default function HeroSection() {
   const scrollToNextSection = () => {
     const aboutSection = document.getElementById("about");
@@ -8,29 +10,60 @@ export default function HeroSection() {
   };
 
   return (
-    <section className="flex flex-col items-center justify-center min-h-[90vh] text-center px-4 relative">
-      <div className="absolute inset-0 flex items-center justify-center opacity-10">
+    <section className="flex flex-col items-center justify-center min-h-[90vh] text-center px-4 relative overflow-hidden">
+      <motion.div 
+        className="absolute inset-0 flex items-center justify-center opacity-10"
+        initial={{ scale: 0.8, opacity: 0 }}
+        animate={{ scale: 1, opacity: 0.1 }}
+        transition={{ duration: 1.5, ease: "easeOut" }}
+      >
         <div className="w-[500px] h-[500px] rounded-full bg-accent-primary blur-[150px]"></div>
-      </div>
-      <h1 className="text-5xl md:text-7xl font-bold mb-6 gradient-text">
-        Ishaan Bhalla
-      </h1>
-      <p className="text-xl md:text-2xl max-w-3xl text-text-secondary mb-8">
+      </motion.div>
+      
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+      >
+        <h1 className="text-5xl md:text-7xl font-bold mb-6 gradient-text">
+          Ishaan Bhalla
+        </h1>
+      </motion.div>
+      
+      <motion.p 
+        className="text-xl md:text-2xl max-w-3xl text-text-secondary mb-8"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.4 }}
+      >
         Full-Stack Engineer & Independent Consultant specializing in rapid MVP
         development and AI-first solutions that drive positive change
-      </p>
-      <div className="flex gap-4 flex-wrap justify-center mb-8">
+      </motion.p>
+      
+      <motion.div 
+        className="flex gap-4 flex-wrap justify-center mb-8"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.6 }}
+      >
         <ContactInfo icon="📍" text="San Francisco" />
         <ContactInfo icon="📱" text="+1(669)609-3553" />
         <ContactInfo icon="📧" text="ibhalla1998@gmail.com" />
-      </div>
+      </motion.div>
 
       {/* Half moon scroll indicator */}
-      <div className="absolute bottom-8 left-0 right-0 flex justify-center">
-        <button
+      <motion.div 
+        className="absolute bottom-8 left-0 right-0 flex justify-center"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.8 }}
+      >
+        <motion.button
           onClick={scrollToNextSection}
-          className="w-12 h-6 bg-transparent border-2 border-accent-primary rounded-t-full overflow-hidden cursor-pointer hover:bg-accent-primary/20 transition-all transform hover:scale-110"
+          className="w-12 h-6 bg-transparent border-2 border-accent-primary rounded-t-full overflow-hidden cursor-pointer hover:bg-accent-primary/20 transition-all transform"
           aria-label="Scroll down"
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}
         >
           <div className="w-full h-full flex justify-center items-center">
             <svg
@@ -49,8 +82,8 @@ export default function HeroSection() {
               />
             </svg>
           </div>
-        </button>
-      </div>
+        </motion.button>
+      </motion.div>
     </section>
   );
 }
