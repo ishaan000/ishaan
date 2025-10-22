@@ -19,9 +19,9 @@ export default function SkillsSection() {
       skills: [
         "OpenAI API",
         "LangChain",
-        "Agentic AI",
-        "Vector Embeddings",
-        "Perplexity Sonar API",
+        "Voice First Agents",
+        "Prompt management and Self Tuning",
+        "LiveKit",
       ],
     },
     {
