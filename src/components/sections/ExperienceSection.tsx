@@ -10,9 +10,20 @@ export default function ExperienceSection() {
   // Experience data
   const experiences: ExperienceItem[] = [
     {
-      title: "Founding Engineer (Contract)",
+      title: "Founding Engineer",
+      company: "Paratus Health (YC W25)",
+      period: "July 2025 - Present",
+      responsibilities: [
+        "Joining as the first engineering hire at a Y Combinator healthcare startup felt like stepping into the future of medicine. The challenge? Building AI voice agents that could actually make healthcare more human, not less.",
+        "I architected our voice-first infrastructure using LiveKit, creating a system that now handles over 2,000 patient calls daily across 15+ clinics. Watching doctors spend more time with patients instead of paperwork — that's when you know you're building something meaningful.",
+        "The business side moved fast too. Within two months, I'd helped onboard 3 major clients and contributed $100k in ARR. Turns out, when you solve real problems for healthcare providers, they notice.",
+        "On the technical front, I built our full-stack platform (Nest.js + Express + OpenAI) and integrated LangFuse for intelligent prompt management. The goal wasn't just to make AI work — it was to make AI work reliably in life-critical situations.",
+      ],
+    },
+    {
+      title: "Founding Engineer",
       company: "Cognovi",
-      period: "July 2024 - Present",
+      period: "July 2024 - June 2025",
       responsibilities: [
         "At Cognovi, I stepped in to tackle a big challenge: making mental health AI feel more trustworthy and insightful. We were building tools that detect cognitive distortions in user input — a powerful idea, but the outputs weren’t always consistent or reliable.",
         "I designed and deployed an agentic system that improved how the AI interprets and responds to emotional content, leading to more meaningful journaling experiences. I also built a custom evaluation framework to measure AI performance — not just in accuracy, but in emotional tone and helpfulness.",
