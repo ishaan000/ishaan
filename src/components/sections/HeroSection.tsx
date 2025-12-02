@@ -1,5 +1,5 @@
 "use client";
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 
 export default function HeroSection() {
   const scrollToNextSection = () => {
@@ -11,7 +11,7 @@ export default function HeroSection() {
 
   return (
     <section className="flex flex-col items-center justify-center min-h-[90vh] text-center px-4 relative overflow-hidden">
-      <motion.div 
+      <motion.div
         className="absolute inset-0 flex items-center justify-center opacity-10"
         initial={{ scale: 0.8, opacity: 0 }}
         animate={{ scale: 1, opacity: 0.1 }}
@@ -19,7 +19,7 @@ export default function HeroSection() {
       >
         <div className="w-[500px] h-[500px] rounded-full bg-accent-primary blur-[150px]"></div>
       </motion.div>
-      
+
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -29,18 +29,18 @@ export default function HeroSection() {
           Ishaan Bhalla
         </h1>
       </motion.div>
-      
-      <motion.p 
+
+      <motion.p
         className="text-xl md:text-2xl max-w-3xl text-text-secondary mb-8"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.4 }}
       >
-        Full-Stack Engineer & Independent Consultant specializing in rapid MVP
-        development and AI-first solutions that drive positive change
+        Full-Stack Engineer specializing in rapid MVP development and AI-first
+        solutions that drive positive change
       </motion.p>
-      
-      <motion.div 
+
+      <motion.div
         className="flex gap-4 flex-wrap justify-center mb-8"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -52,7 +52,7 @@ export default function HeroSection() {
       </motion.div>
 
       {/* Half moon scroll indicator */}
-      <motion.div 
+      <motion.div
         className="absolute bottom-8 left-0 right-0 flex justify-center"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
