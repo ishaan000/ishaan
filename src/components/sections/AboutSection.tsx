@@ -33,11 +33,11 @@ export default function AboutSection() {
         </div>
         <div className="max-w-2xl">
           <p className="text-lg mb-4">
-            I&apos;m a Full-Stack Engineer and independent consultant driven by
-            curiosity, creativity, and a deep belief in tech&apos;s potential
-            for good. With a focus on agentic AI systems, scalable cloud
-            architectures, and fast, end-to-end product development, I thrive on
-            turning early concepts into real, working products.
+            I&apos;m a Full-Stack AI Engineer driven by curiosity, creativity,
+            and a deep belief in tech&apos;s potential for good. With a focus on
+            agentic voice systems, scalable cloud architectures, and fast,
+            end-to-end product development, I thrive on turning early concepts
+            into real, working products.
           </p>
           <p className="text-lg mb-4">
             Over the years, I&apos;ve collaborated with early-stage startups and
