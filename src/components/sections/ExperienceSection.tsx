@@ -14,10 +14,10 @@ export default function ExperienceSection() {
       company: "Paratus Health (YC W25)",
       period: "July 2025 - Present",
       responsibilities: [
-        "Joining as the first engineering hire at a Y Combinator healthcare startup felt like stepping into the future of medicine. The challenge? Building AI voice agents that could actually make healthcare more human, not less.",
-        "I architected our voice-first infrastructure using LiveKit, creating a system that now handles over 2,000 patient calls daily across 15+ clinics. Watching doctors spend more time with patients instead of paperwork — that's when you know you're building something meaningful.",
-        "The business side moved fast too. Within two months, I'd helped onboard 3 major clients and contributed $100k in ARR. Turns out, when you solve real problems for healthcare providers, they notice.",
-        "On the technical front, I built our full-stack platform (Nest.js + Express + OpenAI) and integrated LangFuse for intelligent prompt management. The goal wasn't just to make AI work — it was to make AI work reliably in life-critical situations.",
+        "Joining as the sole engineer at a Y Combinator healthcare startup meant owning everything from day one. The mission? AI voice agents that make healthcare communication faster and more human.",
+        "I architected our voice-first infrastructure using LiveKit with a custom LLM orchestration layer, achieving sub-500ms response times. The platform now handles ~10K patient calls daily across 35+ clinics — including a pediatric after-hours system where accuracy is non-negotiable because a child's health could be at stake.",
+        "I also built an internal Claude AI layer that lets the team create, clone, and refine voice agents without writing code. What used to take days of onboarding now takes hours. When you remove friction for both doctors and your own team, things scale fast.",
+        "The full stack is Next.js, Express, Claude and OpenAI APIs, with LangFuse for prompt observability. The goal was never just to make AI work — it was to make AI work reliably when it matters most.",
       ],
     },
     {
