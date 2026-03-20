@@ -15,9 +15,10 @@ export default function ExperienceSection() {
       period: "July 2025 - Present",
       responsibilities: [
         "Joining as the sole engineer at a Y Combinator healthcare startup meant owning everything from day one. The mission? AI voice agents that make healthcare communication faster and more human.",
-        "I architected our voice-first infrastructure using LiveKit with a custom LLM orchestration layer, achieving sub-500ms response times. The platform now handles ~10K patient calls daily across 35+ clinics — including a pediatric after-hours system where accuracy is non-negotiable because a child's health could be at stake.",
-        "I also built an internal Claude AI layer that lets the team create, clone, and refine voice agents without writing code. What used to take days of onboarding now takes hours. When you remove friction for both doctors and your own team, things scale fast.",
-        "The full stack is Next.js, Express, Claude and OpenAI APIs, with LangFuse for prompt observability. The goal was never just to make AI work — it was to make AI work reliably when it matters most.",
+        "I architected the voice-first infrastructure using LiveKit (Python microservice), with Twilio SIP trunking and multiple voice providers (Retell AI, ElevenLabs, Cartesia) to achieve sub-500ms response times. The platform now handles ~10K patient calls daily across 35+ clinics — including a pediatric after-hours system where accuracy is non-negotiable because a child's health could be at stake.",
+        "I built an internal Claude AI layer that lets the team create, clone, and refine voice agents without writing code. What used to take days of onboarding now takes hours.",
+        "Beyond voice, I built the full communication layer — Vonage SMS, SendGrid email, and Playwright RPA automations to push data into EHR systems. Every channel had to be reliable because every message matters.",
+        "On the quality side, I used Hamming.ai to simulate thousands of test calls and built a client-facing feedback loop that feeds directly into prompt tuning through LangFuse. The LLM gets better with every call.",
       ],
     },
     {

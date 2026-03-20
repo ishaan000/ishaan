@@ -46,22 +46,23 @@ export default function ProjectsSection() {
       sourceLink: "https://github.com/ishaan000/Seeker",
     },
     {
-      title: "Git Guide",
-      subtitle: "Github Knowledge Interface",
+      title: "Footprint AI",
+      subtitle: "AI Climate Action Coach",
       description:
-        "An interactive and modern guide to mastering Git. Developers learn Git through an engaging and interactive interface.",
-      emoji: "📖",
-      emojiLabel: "Git Guide",
-      bgColorClass: "bg-accent-primary/20",
+        "An AI-powered climate coach that tracks your carbon footprint and delivers personalized sustainability recommendations.",
+      emoji: "🌍",
+      emojiLabel: "AI Climate Coach",
+      bgColorClass: "bg-accent-secondary/20",
       technologies: [
-        "React",
+        "Next.js",
         "TypeScript",
-        "Material UI",
-        "Framer Motion",
-        "Node.js",
+        "Perplexity Sonar API",
+        "PostgreSQL",
+        "Redis",
+        "Docker",
       ],
-      projectLink: "https://git-guide-xi.vercel.app/",
-      sourceLink: "https://github.com/ishaan000/git-guide",
+      projectLink: "https://footprint-ai.vercel.app/",
+      sourceLink: "https://github.com/ishaan000/footprint-ai",
     },
   ];
 
@@ -106,7 +107,7 @@ function ProjectCard({ project }: { project: ProjectItem }) {
   return (
     <div
       onClick={handleCardClick}
-      className="bg-black/30 backdrop-blur-md rounded-xl overflow-hidden hover:transform hover:scale-[1.02] transition-all cursor-pointer"
+      className="bg-black/30 backdrop-blur-md rounded-xl overflow-hidden hover:transform hover:scale-[1.02] transition-all cursor-pointer flex flex-col"
     >
       <div
         className={`h-48 ${bgColorClass} flex items-center justify-center text-center p-4`}
@@ -116,7 +117,7 @@ function ProjectCard({ project }: { project: ProjectItem }) {
           <h4 className="mt-2">{emojiLabel}</h4>
         </div>
       </div>
-      <div className="p-6">
+      <div className="p-6 flex flex-col flex-1">
         <h3 className="text-xl font-bold mb-1">{title}</h3>
         <h4 className="text-sm text-accent-primary/80 mb-3">{subtitle}</h4>
         <p className="text-text-secondary mb-4">{description}</p>
@@ -130,7 +131,7 @@ function ProjectCard({ project }: { project: ProjectItem }) {
             </span>
           ))}
         </div>
-        <div className="flex gap-4 mt-3 relative z-10">
+        <div className="flex gap-4 mt-auto pt-3 relative z-10">
           {projectLink && (
             <a
               href={projectLink}

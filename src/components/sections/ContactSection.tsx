@@ -97,7 +97,11 @@ export default function ContactSection() {
           </div>
 
           <div className="bg-black/30 backdrop-blur-md p-6 rounded-xl">
-            <h3 className="text-xl font-bold mb-4">Send Me a Message</h3>
+            <h3 className="text-xl font-bold mb-2">Start a Conversation</h3>
+            <p className="text-text-secondary text-sm mb-4">
+              Whether you&apos;re hiring, exploring a freelance partnership, or
+              just want to connect — I&apos;d love to hear from you.
+            </p>
             <form className="space-y-4" onSubmit={handleSubmit}>
               <div>
                 <label

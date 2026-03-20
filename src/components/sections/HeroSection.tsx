@@ -36,8 +36,8 @@ export default function HeroSection() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.4 }}
       >
-        Full-Stack Engineer specializing in rapid MVP development and AI-first
-        solutions that drive positive change
+        Full-Stack Engineer specializing in Voice AI and Agentic Systems —
+        building technology for the problems that matter most
       </motion.p>
 
       <motion.div
