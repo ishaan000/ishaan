@@ -10,16 +10,7 @@ export default function HeroSection() {
   };
 
   return (
-    <section className="flex flex-col items-center justify-center min-h-[90vh] text-center px-4 relative overflow-hidden">
-      <motion.div
-        className="absolute inset-0 flex items-center justify-center opacity-10"
-        initial={{ scale: 0.8, opacity: 0 }}
-        animate={{ scale: 1, opacity: 0.1 }}
-        transition={{ duration: 1.5, ease: "easeOut" }}
-      >
-        <div className="w-[500px] h-[500px] rounded-full bg-accent-primary blur-[150px]"></div>
-      </motion.div>
-
+    <section className="flex flex-col items-center justify-center min-h-[90vh] text-center px-4 relative">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}

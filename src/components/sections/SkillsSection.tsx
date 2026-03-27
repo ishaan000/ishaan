@@ -1,3 +1,6 @@
+"use client";
+import { motion } from "framer-motion";
+
 // Types for our skill category data
 interface SkillCategory {
   title: string;
@@ -85,7 +88,15 @@ export default function SkillsSection() {
       </h2>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {skillCategories.map((category, index) => (
-          <SkillCard key={index} category={category} />
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 15 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.4, delay: index * 0.06 }}
+          >
+            <SkillCard category={category} />
+          </motion.div>
         ))}
       </div>
     </section>
@@ -97,7 +108,7 @@ function SkillCard({ category }: { category: SkillCategory }) {
   const { title, colorClass, skills } = category;
 
   return (
-    <div className="bg-black/20 backdrop-blur-sm p-6 rounded-xl">
+    <div className="bg-black/20 backdrop-blur-sm p-6 rounded-xl card-glow transition-all">
       <h3 className={`text-xl font-bold mb-4 ${colorClass}`}>{title}</h3>
       <ul className="space-y-2">
         {skills.map((skill, idx) => (

@@ -1,4 +1,6 @@
 "use client";
+import { motion } from "framer-motion";
+
 // Types for our project data
 interface ProjectItem {
   title: string;
@@ -74,7 +76,15 @@ export default function ProjectsSection() {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
-            <ProjectCard key={index} project={project} />
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.5, delay: index * 0.15 }}
+            >
+              <ProjectCard project={project} />
+            </motion.div>
           ))}
         </div>
       </div>
@@ -107,7 +117,7 @@ function ProjectCard({ project }: { project: ProjectItem }) {
   return (
     <div
       onClick={handleCardClick}
-      className="bg-black/30 backdrop-blur-md rounded-xl overflow-hidden hover:transform hover:scale-[1.02] transition-all cursor-pointer flex flex-col"
+      className="bg-black/30 backdrop-blur-md rounded-xl overflow-hidden hover:transform hover:scale-[1.02] transition-all cursor-pointer flex flex-col card-glow"
     >
       <div
         className={`h-48 ${bgColorClass} flex items-center justify-center text-center p-4`}

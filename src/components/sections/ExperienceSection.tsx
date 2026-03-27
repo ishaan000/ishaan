@@ -1,3 +1,6 @@
+"use client";
+import { motion } from "framer-motion";
+
 // Types for our experience data
 interface ExperienceItem {
   title: string;
@@ -16,7 +19,7 @@ export default function ExperienceSection() {
       responsibilities: [
         "Joining as the sole engineer at a Y Combinator healthcare startup meant owning everything from day one. The mission? AI voice agents that make healthcare communication faster and more human.",
         "I architected the voice-first infrastructure using LiveKit (Python microservice), with Twilio SIP trunking and multiple voice providers (Retell AI, ElevenLabs, Cartesia) to achieve sub-500ms response times. The platform now handles ~10K patient calls daily across 35+ clinics — including a pediatric after-hours system where accuracy is non-negotiable because a child's health could be at stake.",
-        "I built an internal Claude AI layer that lets the team create, clone, and refine voice agents without writing code. What used to take days of onboarding now takes hours.",
+        "Designed an end-to-end agent iteration pipeline: client feedback captured via Granola, piped through Claude Code via MCP, with prompt versioning in Langfuse — enabling the non-technical team to create and refine voice agents without writing code. Cut new client onboarding from days to hours.",
         "Beyond voice, I built the full communication layer — Vonage SMS, SendGrid email, and Playwright RPA automations to push data into EHR systems. Every channel had to be reliable because every message matters.",
         "On the quality side, I used Hamming.ai to simulate thousands of test calls and built a client-facing feedback loop that feeds directly into prompt tuning through LangFuse. The LLM gets better with every call.",
       ],
@@ -32,7 +35,7 @@ export default function ExperienceSection() {
       ],
     },
     {
-      title: "Full Stack Data Engineer (Contract)",
+      title: "Full Stack Data Engineer",
       company: "Albert Invent",
       period: "October 2023 - July 2024",
       responsibilities: [
@@ -71,7 +74,15 @@ export default function ExperienceSection() {
         {/* Experience Timeline */}
         <div className="space-y-12">
           {experiences.map((exp, index) => (
-            <ExperienceCard key={index} experience={exp} />
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-80px" }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+            >
+              <ExperienceCard experience={exp} />
+            </motion.div>
           ))}
         </div>
       </div>
@@ -84,7 +95,7 @@ function ExperienceCard({ experience }: { experience: ExperienceItem }) {
   const { title, company, period, responsibilities } = experience;
 
   return (
-    <div className="bg-black/30 backdrop-blur-md rounded-xl p-6 md:p-8">
+    <div className="bg-black/30 backdrop-blur-md rounded-xl p-6 md:p-8 card-glow transition-all">
       <div className="flex flex-col md:flex-row justify-between mb-4">
         <div>
           <h3 className="text-xl font-bold">{title}</h3>

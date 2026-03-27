@@ -1,9 +1,32 @@
 "use client";
 import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 
 export default function Navigation() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  
+  const [activeSection, setActiveSection] = useState("");
+
+  // Scroll spy for active section indicator
+  useEffect(() => {
+    const sectionIds = ["about", "experience", "projects", "skills", "contact"];
+    const observers: IntersectionObserver[] = [];
+
+    sectionIds.forEach((id) => {
+      const el = document.getElementById(id);
+      if (!el) return;
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) setActiveSection(id);
+        },
+        { rootMargin: "-50% 0px -50% 0px" }
+      );
+      observer.observe(el);
+      observers.push(observer);
+    });
+
+    return () => observers.forEach((o) => o.disconnect());
+  }, []);
+
   // Handle body overflow
   useEffect(() => {
     
@@ -51,9 +74,18 @@ export default function Navigation() {
             <a
               key={link.href}
               href={link.href}
-              className="hover:text-accent-primary transition-colors"
+              className={`relative py-1 transition-colors ${
+                activeSection === link.href.slice(1) ? "text-accent-primary" : "hover:text-accent-primary"
+              }`}
             >
               {link.label}
+              {activeSection === link.href.slice(1) && (
+                <motion.div
+                  layoutId="nav-indicator"
+                  className="absolute -bottom-1 left-0 right-0 h-0.5 bg-accent-primary rounded-full"
+                  transition={{ type: "spring", stiffness: 350, damping: 30 }}
+                />
+              )}
             </a>
           ))}
         </div>

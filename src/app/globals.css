@@ -68,6 +68,18 @@ body {
   100% { background-position: 200% center; }
 }
 
+
+/* Card hover glow effect */
+.card-glow {
+  border: 1px solid transparent;
+}
+
+.card-glow:hover {
+  border-color: rgba(110, 86, 207, 0.25);
+  box-shadow: 0 4px 25px rgba(110, 86, 207, 0.1), 0 0 50px rgba(110, 86, 207, 0.05);
+}
+
+
 /* Responsive design improvements */
 @media (max-width: 768px) {
   h1 {
