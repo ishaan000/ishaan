@@ -15,7 +15,7 @@ export default function ExperienceSection() {
     {
       title: "Founding Engineer",
       company: "Paratus Health (YC W25)",
-      period: "July 2025 - Present",
+      period: "July 2025 - April 2026",
       responsibilities: [
         "Joining as the sole engineer at a Y Combinator healthcare startup meant owning everything from day one. The mission? AI voice agents that make healthcare communication faster and more human.",
         "I architected the voice-first infrastructure using LiveKit (Python microservice), with Twilio SIP trunking and multiple voice providers (Retell AI, ElevenLabs, Cartesia) to achieve sub-500ms response times. The platform now handles ~10K patient calls daily across 35+ clinics — including a pediatric after-hours system where accuracy is non-negotiable because a child's health could be at stake.",
