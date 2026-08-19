@@ -33,24 +33,17 @@ export default function AboutSection() {
         </div>
         <div className="max-w-2xl">
           <p className="text-lg mb-4">
-            I&apos;m a full-stack engineer who builds AI products from the
-            ground up — from early architecture decisions to production systems
-            handling thousands of users daily.
+            I&apos;m a full-stack engineer who builds AI products end-to-end,
+            from early architecture decisions to production systems that
+            serve real users every day.
           </p>
           <p className="text-lg mb-4">
-            Right now, I specialize in voice AI and agentic systems. At Paratus
-            Health (YC W25), I built the entire voice platform as the sole
-            engineer — real-time pipelines, LLM orchestration, agent management
-            tooling — scaling to 10K+ calls/day across 35+ clinics. Before that,
-            I built AI mental health tools at Cognovi and internal frameworks and
-            data pipelines at Albert Invent and Virtusa.
-          </p>
-          <p className="text-lg mb-4">
-            I&apos;ve often been the first engineer on the team, which taught me
-            to own problems end-to-end. But the work I&apos;m most proud of has
-            always involved close collaboration — with founders, designers, and
-            end users. I build best when I&apos;m close to the problem and the
-            people it affects.
+            Right now, I specialize in voice AI and agentic systems as a
+            Product Engineer at Preveta. Before that, I built the entire
+            voice platform at Paratus Health (YC W25) as the sole engineer,
+            scaling to 10K+ calls a day across 35+ clinics. I&apos;ve usually
+            been the first engineer on the team, and I build best close to
+            the problem and the people it affects.
           </p>
           <div className="mt-8 space-y-4">
             <h3 className="text-xl font-bold text-accent-secondary">

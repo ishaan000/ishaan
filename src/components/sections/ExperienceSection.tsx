@@ -13,15 +13,23 @@ export default function ExperienceSection() {
   // Experience data
   const experiences: ExperienceItem[] = [
     {
+      title: "Product Engineer",
+      company: "Preveta",
+      period: "May 2026 - Present",
+      responsibilities: [
+        "I joined Preveta's AI engine team to scale voice agents that guide oncology, urology, and GI patients through care journeys, where a missed follow-up can cost a life.",
+        "I built out Langfuse observability across our voice agents, giving the team visibility into every trace, token, and cost per call.",
+        "I integrated automated regression testing through Hamming.ai, giving the team the confidence to ship Agent Kate, our first fully automated patient outreach agent, to production.",
+      ],
+    },
+    {
       title: "Founding Engineer",
       company: "Paratus Health (YC W25)",
       period: "July 2025 - April 2026",
       responsibilities: [
-        "Joining as the sole engineer at a Y Combinator healthcare startup meant owning everything from day one. The mission? AI voice agents that make healthcare communication faster and more human.",
-        "I architected the voice-first infrastructure using LiveKit (Python microservice), with Twilio SIP trunking and multiple voice providers (Retell AI, ElevenLabs, Cartesia) to achieve sub-500ms response times. The platform now handles ~10K patient calls daily across 35+ clinics — including a pediatric after-hours system where accuracy is non-negotiable because a child's health could be at stake.",
-        "Designed an end-to-end agent iteration pipeline: client feedback captured via Granola, piped through Claude Code via MCP, with prompt versioning in Langfuse — enabling the non-technical team to create and refine voice agents without writing code. Cut new client onboarding from days to hours.",
-        "Beyond voice, I built the full communication layer — Vonage SMS, SendGrid email, and Playwright RPA automations to push data into EHR systems. Every channel had to be reliable because every message matters.",
-        "On the quality side, I used Hamming.ai to simulate thousands of test calls and built a client-facing feedback loop that feeds directly into prompt tuning through LangFuse. The LLM gets better with every call.",
+        "Joining as the sole engineer at a Y Combinator healthcare startup meant owning everything from day one: AI voice agents that make healthcare communication faster and more human.",
+        "I architected the voice-first infrastructure with LiveKit, Twilio SIP trunking, and multiple voice providers to hit sub-500ms response times. The platform handled ~10K patient calls a day across 35+ clinics, including a pediatric after-hours system where accuracy was non-negotiable.",
+        "I designed an end-to-end agent iteration pipeline: client feedback through Granola, piped into Claude Code via MCP, with prompt versioning in Langfuse and simulated testing through Hamming.ai. This cut new client onboarding from days to hours.",
       ],
     },
     {
@@ -29,9 +37,8 @@ export default function ExperienceSection() {
       company: "Cognovi",
       period: "July 2024 - June 2025",
       responsibilities: [
-        "At Cognovi, I stepped in to tackle a big challenge: making mental health AI feel more trustworthy and insightful. We were building tools that detect cognitive distortions in user input — a powerful idea, but the outputs weren’t always consistent or reliable.",
-        "I designed and deployed an agentic system that improved how the AI interprets and responds to emotional content, leading to more meaningful journaling experiences. I also built a custom evaluation framework to measure AI performance — not just in accuracy, but in emotional tone and helpfulness.",
-        "On the product side, I led full-stack development (Next.js frontend, Express + OpenAI backend), and containerized the app for rapid deployment on AWS, cutting dev time in half.",
+        "I stepped in to make mental health AI more trustworthy, designing an agentic system that improved how the AI interpreted and responded to emotional content, for more meaningful journaling experiences.",
+        "I built a custom evaluation framework to measure AI performance beyond accuracy, covering emotional tone and helpfulness. I led full-stack development (Next.js, Express, OpenAI) and containerized the app for AWS, cutting dev time in half.",
       ],
     },
     {
@@ -39,9 +46,8 @@ export default function ExperienceSection() {
       company: "Albert Invent",
       period: "October 2023 - July 2024",
       responsibilities: [
-        "Albert was growing fast — with distributed teams shipping features rapidly, UI consistency became a bottleneck. Developers were duplicating effort, and product quality started to drift.",
-        "I partnered with the CTO to build “Maya,” a shared frontend framework using HTML web components and vanilla JS, giving the team a clean, reusable system that cut dev time in half and brought design coherence across the app.",
-        "Alongside that, I built backend services in Go and optimized data pipelines using Ray and S3, reducing processing errors and speeding up retrieval across Postgres and DynamoDB.",
+        "I partnered with the CTO to build “Maya,” a shared frontend framework using web components and vanilla JS. It cut dev time in half and brought design coherence across a fast-growing, distributed team.",
+        "I built backend services in Go and optimized data pipelines with Ray and S3, reducing processing errors and speeding up retrieval across Postgres and DynamoDB.",
       ],
     },
     {
@@ -49,8 +55,8 @@ export default function ExperienceSection() {
       company: "SWAY",
       period: "September 2022 - October 2023",
       responsibilities: [
-        "When I joined SWAY, the product was in its early stages and needed clear technical direction. I worked closely with the CEO to shape the foundation — from designing the database schema to building modular components and crafting a cohesive frontend experience.",
-        "Using React, TypeScript, and GraphQL, I optimized key flows that improved performance by 40% and significantly reduced query times. These upgrades played a big role in growing user engagement and satisfaction.",
+        "I joined SWAY early and worked with the CEO to shape the technical foundation: database schema, modular components, and a cohesive frontend.",
+        "Using React, TypeScript, and GraphQL, I optimized key flows, improving performance by 40% and cutting query times. This drove stronger user engagement.",
       ],
     },
     {
@@ -58,7 +64,7 @@ export default function ExperienceSection() {
       company: "Virtusa",
       period: "May 2019 - August 2021",
       responsibilities: [
-        "Virtusa’s machine learning teams needed cleaner, faster data — but the pipelines were breaking under scale. I designed Spark-based ETL flows and Kafka queues that could handle 2x more load, then restructured their AWS stack to support real-time workflows.",
+        "Virtusa's ML teams needed cleaner, faster data. I designed Spark-based ETL flows and Kafka queues that handled 2x more load, and restructured the AWS stack for real-time workflows.",
         "The result: faster data ingestion, more reliable model training, and happier analysts.",
       ],
     },
